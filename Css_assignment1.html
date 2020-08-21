@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment1</title>
+    <style>
+        .label1{
+            font-family: Roboto Bold;
+            font-weight: 600;
+            width: min-content;
+        }
+        .label1[data-type="light-green"]{
+            color: lightgreen;
+        }
+        .input1{
+            font-family: Roboto Regular;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a registration form with username,email and password as inputs and an button to submit the form -->
+    <!-- Set lable's font to Roboto Bold (600 weight) and inputs' font to Roboto Regular (400 weight) -->
+    <!-- Do not use table-->
+    <!-- Set same min-width for all labels -->
+    <!-- All field should have required field validation check-->
+    <!-- Change color of email's lables to a light green without setting any IDs or Class-->
+    <form method="GET">
+        <lable for="username" class="label1">User Name : </lable>
+        <input type="text" class="input1" name="name" required><br>
+
+        <lable for="email" class="label1" data-type="light-green"> Email : </lable>
+        <input type="email" class="input1" name="email" required><br>
+        <label for="password" class="label1">Password : </lable></td>
+        <input type="password" class="input1" name="password" required><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+  <!--Ref : <a href="https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048" target="_blank"/>the-30-css-selectors-you-must-memorize</a>-->
+</body>
+</html>
