@@ -1,20 +1,26 @@
 function hoursAttended(attended , length ){
 
-    if(
-    (typeof attended == 'string' && typeof length == 'number' && attended.trim().length > 0) || 
-    (typeof attended == 'number' && typeof length == 'string' && length.trim().length > 0)){
-
+    if(typeof attended == 'string' &&  attended.trim() != "" ){
         attended = Number(attended);
+    }
+     else if(typeof length == 'string' &&  length.trim() != "" ){
         length = Number(length);
-        if(((attended - Math.floor(attended)) ===0) && ((length - Math.floor(length)) ===0)){
+    }
+    else{
+        return false;
+        
+    }
+
+        if(Number.isInteger(attended)==true && Number.isInteger(length)==true){
         if(attended >= 0 && length >= 0 && attended <= length){
             return true;
         }
         else return false;
+        
     }
-    else return false;
-    }
-    else return false;
+        else return false;
+    
+    
 
 
 }
@@ -41,3 +47,4 @@ console.log(hoursAttended(6.1,10) === false);
 console.log(hoursAttended(6,"10.1") === false);
 console.log(hoursAttended("6.1",10) === false);
 console.log(hoursAttended("6.1","10.1") === false);
+//console.log(hoursAttended("6",10) === false);
